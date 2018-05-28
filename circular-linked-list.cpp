@@ -56,6 +56,19 @@ void CircularLinkedList<CLL>::push_back(CLL content)
 }
 
 template<typename CLL>
+void CircularLinkedList<CLL>::print()
+{
+  struct node<CLL> *aux = head->next;
+
+  for (int i = 0; i < length; i++)
+  {
+    std::cout << aux->content << " ";
+    aux = aux->next;
+  }
+  std::cout << std::endl;
+}
+
+template<typename CLL>
 void CircularLinkedList<CLL>::remove(int index)
 {
   if (index < 0 || index >= length)
