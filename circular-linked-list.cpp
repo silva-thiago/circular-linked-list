@@ -11,7 +11,7 @@ CircularLinkedList<CLL>::CircularLinkedList()
 template <typename CLL>
 CircularLinkedList<CLL>::~CircularLinkedList() {}
 
-template<typename CLL>
+template <typename CLL>
 bool CircularLinkedList<CLL>::empty()
 {
   return length == 0;
@@ -33,6 +33,24 @@ void CircularLinkedList<CLL>::push_front(CLL content)
     newNode->next = newNode;
     tail->next->next = newNode;
   }
+
   head->next = newNode;
+  length++;
+}
+
+template <typename CLL>
+void CircularLinkedList<CLL>::push_back(CLL content)
+{
+  if (empty())
+  {
+    push_front(content);
+    return;
+  }
+
+  struct node<CLL> *newNode = new struct node<CLL>;
+  newNode->content = content;
+  newNode->next = tail->next->next;
+  tail->next->next = newNode;
+  tail->next = newNode;
   length++;
 }
