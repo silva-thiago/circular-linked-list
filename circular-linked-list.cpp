@@ -63,4 +63,15 @@ void CircularLinkedList<CLL>::remove(int index)
     std::cout << "Error: Invalid index!" << std::endl;
     return;
   }
+
+  struct node<CLL> * aux = head->next;
+  for (int i = 0; i < index - 1; i++)
+  {
+    aux = aux->next;
+  }
+
+  struct node<CLL> *aux2 = aux->next;
+  aux->next = aux2->next;
+  delete aux2;
+  length--;
 }
