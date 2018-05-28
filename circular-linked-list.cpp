@@ -54,3 +54,13 @@ void CircularLinkedList<CLL>::push_back(CLL content)
   tail->next = newNode;
   length++;
 }
+
+template<typename CLL>
+void CircularLinkedList<CLL>::remove(int index)
+{
+  if (index < 0 || index >= length)
+  {
+    std::cout << "Error: Invalid index!" << std::endl;
+    return;
+  }
+}
