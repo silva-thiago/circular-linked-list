@@ -10,3 +10,10 @@ CircularLinkedList<CLL>::CircularLinkedList()
 
 template <typename CLL>
 CircularLinkedList<CLL>::~CircularLinkedList() {}
+
+template <typename CLL>
+void CircularLinkedList<CLL>::push_front(CLL content)
+{
+  struct node<CLL> *newNode = new struct node<CLL>;
+  newNode->content = content;
+}
