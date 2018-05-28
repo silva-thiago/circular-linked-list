@@ -11,6 +11,12 @@ CircularLinkedList<CLL>::CircularLinkedList()
 template <typename CLL>
 CircularLinkedList<CLL>::~CircularLinkedList() {}
 
+template<typename CLL>
+bool CircularLinkedList<CLL>::empty()
+{
+  return length == 0;
+}
+
 template <typename CLL>
 void CircularLinkedList<CLL>::push_front(CLL content)
 {
