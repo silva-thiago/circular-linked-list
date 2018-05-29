@@ -16,6 +16,11 @@ int main(int argc, char const *argv[])
   list.PushFront(130);
   list.PushFront(140);
 
+  for (int i = 0; i < 5; i++)
+  {
+    list.Remove(4);
+  }
+
   list.Print();
 
   return 0;
