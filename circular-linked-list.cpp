@@ -39,7 +39,7 @@ CircularLinkedList<CLL>::~CircularLinkedList() {}
  * @brief Function that checks if the list is empty
  */
 template <typename CLL>
-bool CircularLinkedList<CLL>::Empty()
+bool CircularLinkedList<CLL>::empty_list()
 {
   return length == 0;
 }
@@ -48,12 +48,12 @@ bool CircularLinkedList<CLL>::Empty()
  * @brief Function that adds a new node at the top of the list
  */
 template <typename CLL>
-void CircularLinkedList<CLL>::PushFront(CLL content)
+void CircularLinkedList<CLL>::push_front(CLL content)
 {
   struct node<CLL> *newNode = new struct node<CLL>;
   newNode->content = content;
 
-  if (Empty())
+  if (empty_list())
   {
     tail->next = newNode;
     newNode->next = newNode;
@@ -72,11 +72,11 @@ void CircularLinkedList<CLL>::PushFront(CLL content)
  * @brief Function that adds a new node at the end of the list
  */
 template <typename CLL>
-void CircularLinkedList<CLL>::PushBack(CLL content)
+void CircularLinkedList<CLL>::push_back(CLL content)
 {
-  if (Empty())
+  if (empty_list())
   {
-    PushFront(content);
+    push_front(content);
     return;
   }
 
@@ -92,7 +92,7 @@ void CircularLinkedList<CLL>::PushBack(CLL content)
  * @brief Function to print the list nodes
  */
 template <typename CLL>
-void CircularLinkedList<CLL>::Print()
+void CircularLinkedList<CLL>::print_list()
 {
   struct node<CLL> *aux = head->next;
 
@@ -108,7 +108,7 @@ void CircularLinkedList<CLL>::Print()
  * @brief Function to remove the nodes from the list
  */
 template <typename CLL>
-void CircularLinkedList<CLL>::Remove(int index)
+void CircularLinkedList<CLL>::remove_node(int index)
 {
   if (index < 0 || index >= length)
   {
