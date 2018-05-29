@@ -1,3 +1,15 @@
+/**
+ * @file circular-linked-list.hpp
+ * @brief Developed circular linked list class in C++
+ * @author Thiago Silva
+ * @since 28/05/2018
+ * @date 28/05/2018
+ * 
+ * @section Description
+ *  
+ * This class contains the basis of a circular linked list.
+ */
+
 #ifndef _CIRCULAR_LINKED_LIST_HPP_
 #define _CIRCULAR_LINKED_LIST_HPP_
 
@@ -14,25 +26,34 @@ template <typename CLL>
 class CircularLinkeList
 {
   private:
+    /**
+       * @brief Atributes
+       */
     struct node<CLL> *head;
     struct node<CLL> *tail;
     int length;
-  
+
   public:
+    /**
+       * @brief constructor & destructor
+       */
     CircularLinkeList();
     ~CircularLinkeList();
 
+    /**
+       * @brief methods
+       */
     void push_back(CLL content);
     void push_front(CLL content);
-    int search(CLL content);
-    CLL getElement(int index);
+    // int search(CLL content);
+    // CLL getElement(int index);
     void remove(int index);
     void erase();
-    int length();
+    // int length();
     bool empty();
     void print();
 };
 
-#include "circular-linked-list.hpp"
+#include "circular-linked-list.cpp"
 
 #endif
