@@ -1,3 +1,4 @@
+// Constructor
 template <typename CLL>
 CircularLinkedList<CLL>::CircularLinkedList()
 {
@@ -8,15 +9,18 @@ CircularLinkedList<CLL>::CircularLinkedList()
   length = 0;
 }
 
+// Desctructor
 template <typename CLL>
 CircularLinkedList<CLL>::~CircularLinkedList() {}
 
+// Função que verifica se a lista está vazia
 template <typename CLL>
 bool CircularLinkedList<CLL>::empty()
 {
   return length == 0;
 }
 
+// Função que adiciona um novo nó no início da lista
 template <typename CLL>
 void CircularLinkedList<CLL>::push_front(CLL content)
 {
@@ -38,6 +42,7 @@ void CircularLinkedList<CLL>::push_front(CLL content)
   length++;
 }
 
+// Função que adiciona um novo nó no final da lista
 template <typename CLL>
 void CircularLinkedList<CLL>::push_back(CLL content)
 {
@@ -55,6 +60,7 @@ void CircularLinkedList<CLL>::push_back(CLL content)
   length++;
 }
 
+// Função para imprimir os nós da lista
 template<typename CLL>
 void CircularLinkedList<CLL>::print()
 {
@@ -68,6 +74,7 @@ void CircularLinkedList<CLL>::print()
   std::cout << std::endl;
 }
 
+// Função para remover os nós da lista
 template<typename CLL>
 void CircularLinkedList<CLL>::remove(int index)
 {
