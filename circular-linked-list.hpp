@@ -45,11 +45,11 @@ class CircularLinkeList
        */
     void push_back(CLL content);
     void push_front(CLL content);
-    int start_search(CLL content);
-    CLL get_element(int index);
+    // int start_search(CLL content);
+    // CLL get_element(int index);
     void remove_node(int index);
-    void erase_node();
-    int length_list();
+    // void erase_node();
+    // int length_list();
     bool empty_list();
     void print_list();
 };
