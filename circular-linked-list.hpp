@@ -43,15 +43,15 @@ class CircularLinkeList
     /**
        * @brief methods
        */
-    void push_back(CLL content);
-    void push_front(CLL content);
-    // int search(CLL content);
-    // CLL getElement(int index);
-    void remove(int index);
-    void erase();
-    // int length();
-    bool empty();
-    void print();
+    void PushBack(CLL content);
+    void PushFront(CLL content);
+    int Search(CLL content);
+    CLL getElement(int index);
+    void Remove(int index);
+    void Erase();
+    int Length();
+    bool Empty();
+    void Print();
 };
 
 #include "circular-linked-list.cpp"
