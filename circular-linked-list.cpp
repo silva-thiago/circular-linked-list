@@ -1,26 +1,52 @@
-// Constructor
+/**
+ * @file circular-linked-list.cpp
+ * @brief Developed circular linked list class in C++
+ * @author Thiago Silva
+ * @since 28/05/2018
+ * @date 28/05/2018
+ * 
+ * @section Description
+ *  
+ * This class contains the basis of a circular linked list.
+ */
+
+/**
+ * @brief Constructor
+ */
 template <typename CLL>
 CircularLinkedList<CLL>::CircularLinkedList()
 {
+  /** @details The "head" is a pointer to the first element in the list.
+   * As the list is empty, the head points to NULL.
+   */
   head = new struct node<CLL>;
   head->next = nullptr;
+  /** @Details The "tail" is a pointer to the last element in the list.
+   * As the list is empty, the tail points to NULL.
+   */
   tail = new struct node<CLL>;
   tail->next = nullptr;
   length = 0;
 }
 
-// Desctructor
+/**
+ * @brief Desctructor
+ */
 template <typename CLL>
 CircularLinkedList<CLL>::~CircularLinkedList() {}
 
-// Função que verifica se a lista está vazia
+/**
+ * @brief Function that checks if the list is empty
+ */
 template <typename CLL>
 bool CircularLinkedList<CLL>::empty()
 {
   return length == 0;
 }
 
-// Função que adiciona um novo nó no início da lista
+/**
+ * @brief Function that adds a new node at the top of the list
+ */
 template <typename CLL>
 void CircularLinkedList<CLL>::push_front(CLL content)
 {
@@ -42,7 +68,9 @@ void CircularLinkedList<CLL>::push_front(CLL content)
   length++;
 }
 
-// Função que adiciona um novo nó no final da lista
+/**
+ * @brief Function that adds a new node at the end of the list
+ */
 template <typename CLL>
 void CircularLinkedList<CLL>::push_back(CLL content)
 {
@@ -60,7 +88,9 @@ void CircularLinkedList<CLL>::push_back(CLL content)
   length++;
 }
 
-// Função para imprimir os nós da lista
+/**
+ * @brief Function to print the list nodes
+ */
 template<typename CLL>
 void CircularLinkedList<CLL>::print()
 {
@@ -74,7 +104,9 @@ void CircularLinkedList<CLL>::print()
   std::cout << std::endl;
 }
 
-// Função para remover os nós da lista
+/**
+ * @brief Function to remove the nodes from the list
+ */
 template<typename CLL>
 void CircularLinkedList<CLL>::remove(int index)
 {
