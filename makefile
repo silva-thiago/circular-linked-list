@@ -1,5 +1,5 @@
 # Makefile for "store"
-# Created by Thiago Silva 05/23/2018
+# Created by Thiago Silva 05/28/2018
 #
 # Complete Makefile separating the different elements of the application as a code (src),
 # headers (include), executables (build), libraries (lib), etc.
